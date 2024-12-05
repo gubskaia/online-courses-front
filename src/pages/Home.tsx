@@ -1,6 +1,7 @@
 import React from 'react';
 import StatsSection from "../components/StatsSection.tsx";
 import InfoSection from "../components/InfoSection.tsx";
+import PopularCoursesSection from "../components/PopularCoursesSection.tsx";
 
 const styles = {
     container: {
@@ -12,6 +13,7 @@ const styles = {
         background: 'linear-gradient(135deg, #e0f7fa, #ffffff)',
         fontFamily: '"Poppins", sans-serif',
         overflow: 'hidden',
+        position: 'relative',
     },
     leftSection: {
         flex: 1,
@@ -26,6 +28,7 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'relative',
+        // animation: 'float 6s infinite ease-in-out',
     },
     title: {
         fontSize: '5rem',
@@ -36,6 +39,7 @@ const styles = {
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         textAlign: 'left',
+        animation: 'gradientShift 5s infinite',
     },
     description: {
         fontSize: '1.2rem',
@@ -63,14 +67,16 @@ const styles = {
         color: 'white',
     },
     buttonHover: {
-        backgroundColor: '#004d91', // Darker blue
-        transform: 'scale(1.05)',
+        ':hover': {
+            backgroundColor: '#004d91',
+            transform: 'scale(1.05)',
+        },
     },
     image: {
         maxWidth: '100%',
         height: 'auto',
         objectFit: 'contain',
-        filter: 'drop-shadow(0 0 30px rgba(173, 216, 230, 0.7)) drop-shadow(0 0 50px rgba(0, 204, 255, 0.6)) drop-shadow(0 0 70px rgba(0, 153, 255, 0.4))',
+        animation: 'float 8s infinite ease-in-out',
     },
     infoCard: {
         position: 'absolute',
@@ -87,6 +93,7 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
         fontWeight: 'bold',
+        // animation: 'float 6s infinite ease-in-out',
     },
     cardIconWrapper: {
         position: 'absolute',
@@ -120,6 +127,27 @@ const styles = {
 const Home: React.FC = () => {
     return (
         <div>
+            <style>
+                {`
+                    @keyframes float {
+                        0%, 100% {
+                            transform: translateY(0);
+                        }
+                        50% {
+                            transform: translateY(-15px);
+                        }
+                    }
+
+                    @keyframes gradientShift {
+                        0%, 100% {
+                            background-position: 0% 50%;
+                        }
+                        50% {
+                            background-position: 100% 50%;
+                        }
+                    }
+                `}
+            </style>
             <div style={styles.container}>
                 {/* Left Section */}
                 <div style={styles.leftSection}>
@@ -131,14 +159,10 @@ const Home: React.FC = () => {
                         Unlock your potential with our innovative learning platform. Access top-tier courses and expert guidance to elevate your knowledge and skills.
                     </p>
                     <div style={styles.buttonGroup}>
-                        <button
-                            style={{ ...styles.button }}
-                        >
+                        <button style={{ ...styles.button, ...styles.buttonHover }}>
                             Explore Courses
                         </button>
-                        <button
-                            style={{ ...styles.button }}
-                        >
+                        <button style={{ ...styles.button, ...styles.buttonHover }}>
                             Get Unlimited Learning
                         </button>
                     </div>
@@ -188,6 +212,7 @@ const Home: React.FC = () => {
             </div>
             <StatsSection />
             <InfoSection />
+            <PopularCoursesSection />
         </div>
     );
 };
