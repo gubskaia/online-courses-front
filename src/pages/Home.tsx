@@ -9,7 +9,7 @@ const styles = {
         justifyContent: 'space-between',
         alignItems: 'center',
         height: '92vh',
-        padding: '0 5%',
+        padding: '0 6%',
         background: 'linear-gradient(135deg, #e0f7fa, #ffffff)',
         fontFamily: '"Poppins", sans-serif',
         overflow: 'hidden',
