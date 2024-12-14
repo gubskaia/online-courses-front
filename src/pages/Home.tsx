@@ -2,6 +2,10 @@ import React from 'react';
 import StatsSection from "../components/StatsSection.tsx";
 import InfoSection from "../components/InfoSection.tsx";
 import PopularCoursesSection from "../components/PopularCoursesSection.tsx";
+import BestsellerCourses from "../components/BestsellerCourses.tsx";
+import StudentReviews from "../components/StudentReviews.tsx";
+import FAQSection from "../components/FAQSection.tsx";
+import PromoSection from "../components/PromoSection.tsx";
 
 const styles = {
     container: {
@@ -10,7 +14,7 @@ const styles = {
         alignItems: 'center',
         height: '92vh',
         padding: '0 6%',
-        background: 'linear-gradient(135deg, #e0f7fa, #ffffff)',
+        // background: 'linear-gradient(135deg, #e0f7fa, #ffffff)',
         fontFamily: '"Poppins", sans-serif',
         overflow: 'hidden',
         position: 'relative',
@@ -212,7 +216,11 @@ const Home: React.FC = () => {
             </div>
             <StatsSection />
             <InfoSection />
-            <PopularCoursesSection />
+            {/*<PopularCoursesSection />*/}
+            <BestsellerCourses/>
+            <PromoSection/>
+            <StudentReviews/>
+            <FAQSection/>
         </div>
     );
 };
