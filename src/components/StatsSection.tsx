@@ -3,13 +3,20 @@ import { motion } from 'framer-motion';
 
 const styles = {
     container: {
-        backgroundColor: '#10234f',
+        backgroundColor: '#0b0c10', // Очень тёмный фон
+        backgroundImage: `
+        radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.3), transparent 60%),
+        radial-gradient(circle at 80% 50%, rgba(138, 43, 226, 0.3), transparent 60%)`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '600px 600px, 600px 600px', // Размеры фиолетовых вспышек
+        backgroundPosition: 'left center, right center', // Позиции вспышек
         color: 'white',
         padding: '50px 10%',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        position: 'relative',
         overflow: 'hidden',
     },
     statBlock: {

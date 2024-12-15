@@ -2,9 +2,9 @@ import React from "react";
 
 const styles = {
     section: {
-        backgroundColor: "#4B0082",
-        color: "#fff",
-        borderRadius: "16px",
+        background: 'linear-gradient(90deg, #0b0c10, #4e0069)',
+        color: "#ffffff",
+        borderRadius: "24px",
         padding: "32px",
         display: "flex",
         flexDirection: "row",
@@ -20,7 +20,7 @@ const styles = {
         textAlign: "left",
     },
     heading3: {
-        color: "#FFD700",
+        color: "#dfb8f6",
         fontSize: "18px",
         marginBottom: "8px",
     },
@@ -34,10 +34,10 @@ const styles = {
         marginBottom: "24px",
     },
     button: {
-        backgroundColor: "#6A5ACD",
+        backgroundColor: "#bb6cce",
         color: "#fff",
         padding: "12px 24px",
-        borderRadius: "8px",
+        borderRadius: "25px",
         fontSize: "16px",
         cursor: "pointer",
         border: "none",
@@ -60,7 +60,7 @@ const styles = {
     discountBadge: {
         position: "absolute",
         top: "16px",
-        right: "16px",
+        right: "-6px",
         backgroundColor: "#FF4500",
         color: "#fff",
         padding: "8px 16px",

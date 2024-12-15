@@ -14,7 +14,6 @@ const styles = {
         alignItems: 'center',
         height: '92vh',
         padding: '0 6%',
-        // background: 'linear-gradient(135deg, #e0f7fa, #ffffff)',
         fontFamily: '"Poppins", sans-serif',
         overflow: 'hidden',
         position: 'relative',
@@ -32,14 +31,13 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'relative',
-        // animation: 'float 6s infinite ease-in-out',
     },
     title: {
         fontSize: '5rem',
         fontWeight: 700,
         lineHeight: '1.1',
         marginBottom: '1rem',
-        background: 'linear-gradient(90deg, #003366, #0066cc)',
+        background: 'linear-gradient(90deg, #0b0c10, #c67ae5)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         textAlign: 'left',
@@ -47,7 +45,6 @@ const styles = {
     },
     description: {
         fontSize: '1.2rem',
-        color: '#004d91',
         marginBottom: '2rem',
         lineHeight: '1.6',
     },
@@ -67,14 +64,26 @@ const styles = {
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
         width: '270px',
         textAlign: 'center',
-        backgroundColor: '#007ac1',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    darkButton: {
+        backgroundColor: '#333333',  // Dark background
         color: 'white',
+    },
+    transparentButton: {
+        backgroundColor: 'transparent', // Transparent background
+        color: '#5d1f77',  // Light text color
+        border: '2px solid #5d1f77', // Light border color
     },
     buttonHover: {
         ':hover': {
-            backgroundColor: '#004d91',
             transform: 'scale(1.05)',
         },
+    },
+    arrow: {
+        marginLeft: '10px',
     },
     image: {
         maxWidth: '100%',
@@ -87,17 +96,15 @@ const styles = {
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         borderRadius: '15px',
         padding: '1.5rem',
-        boxShadow: '0 0 20px rgba(173, 216, 230, 0.6)',
+        boxShadow: '0 0 20px rgba(0, 0, 0, 0.6)',
         textAlign: 'center',
         fontSize: '1rem',
-        color: '#004d91',
         maxWidth: '220px',
         backdropFilter: 'blur(10px)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         fontWeight: 'bold',
-        // animation: 'float 6s infinite ease-in-out',
     },
     cardIconWrapper: {
         position: 'absolute',
@@ -131,27 +138,27 @@ const styles = {
 const Home: React.FC = () => {
     return (
         <div>
-            <style>
-                {`
-                    @keyframes float {
-                        0%, 100% {
-                            transform: translateY(0);
-                        }
-                        50% {
-                            transform: translateY(-15px);
-                        }
-                    }
+            {/*<style>*/}
+            {/*    {`*/}
+            {/*        @keyframes float {*/}
+            {/*            0%, 100% {*/}
+            {/*                transform: translateY(0);*/}
+            {/*            }*/}
+            {/*            50% {*/}
+            {/*                transform: translateY(-15px);*/}
+            {/*            }*/}
+            {/*        }*/}
 
-                    @keyframes gradientShift {
-                        0%, 100% {
-                            background-position: 0% 50%;
-                        }
-                        50% {
-                            background-position: 100% 50%;
-                        }
-                    }
-                `}
-            </style>
+            {/*        @keyframes gradientShift {*/}
+            {/*            0%, 100% {*/}
+            {/*                background-position: 0% 50%;*/}
+            {/*            }*/}
+            {/*            50% {*/}
+            {/*                background-position: 100% 50%;*/}
+            {/*            }*/}
+            {/*        }*/}
+            {/*    `}*/}
+            {/*</style>*/}
             <div style={styles.container}>
                 {/* Left Section */}
                 <div style={styles.leftSection}>
@@ -163,11 +170,12 @@ const Home: React.FC = () => {
                         Unlock your potential with our innovative learning platform. Access top-tier courses and expert guidance to elevate your knowledge and skills.
                     </p>
                     <div style={styles.buttonGroup}>
-                        <button style={{ ...styles.button, ...styles.buttonHover }}>
+                        <button style={{ ...styles.button, ...styles.darkButton, ...styles.buttonHover }}>
                             Explore Courses
                         </button>
-                        <button style={{ ...styles.button, ...styles.buttonHover }}>
-                            Get Unlimited Learning
+                        <button style={{ ...styles.button, ...styles.transparentButton, ...styles.buttonHover }}>
+                            Contact Us
+                            <span style={styles.arrow}>→</span>
                         </button>
                     </div>
                 </div>
@@ -175,52 +183,52 @@ const Home: React.FC = () => {
                 {/* Right Section */}
                 <div style={styles.rightSection}>
                     <img
-                        src="src/assets/planet.png"
+                        src="src/assets/planet-home.png"
                         alt="Students"
                         style={styles.image}
                     />
                     {/* Card 1 */}
-                    <div style={{ ...styles.infoCard, ...styles.card1 }}>
-                        <div style={styles.cardIconWrapper}>
-                            <img
-                                src="src/assets/gear-dark.png"
-                                alt="Card Icon"
-                                style={styles.cardIcon}
-                            />
-                        </div>
-                        <p>Remote learning</p>
-                    </div>
-                    {/* Card 2 */}
-                    <div style={{ ...styles.infoCard, ...styles.card2 }}>
-                        <div style={styles.cardIconWrapper}>
-                            <img
-                                src="src/assets/open-book-dark.png"
-                                alt="Card Icon"
-                                style={styles.cardIcon}
-                            />
-                        </div>
-                        <p>Courses guidelines</p>
-                    </div>
-                    {/* Card 3 */}
-                    <div style={{ ...styles.infoCard, ...styles.card3 }}>
-                        <div style={styles.cardIconWrapper}>
-                            <img
-                                src="src/assets/university-dark.png"
-                                alt="Card Icon"
-                                style={styles.cardIcon}
-                            />
-                        </div>
-                        <p>Expert trainers</p>
-                    </div>
+                    {/*<div style={{ ...styles.infoCard, ...styles.card1 }}>*/}
+                    {/*    <div style={styles.cardIconWrapper}>*/}
+                    {/*        <img*/}
+                    {/*            src="src/assets/gear-dark.png"*/}
+                    {/*            alt="Card Icon"*/}
+                    {/*            style={styles.cardIcon}*/}
+                    {/*        />*/}
+                    {/*    </div>*/}
+                    {/*    <p>Remote learning</p>*/}
+                    {/*</div>*/}
+                    {/*/!* Card 2 *!/*/}
+                    {/*<div style={{ ...styles.infoCard, ...styles.card2 }}>*/}
+                    {/*    <div style={styles.cardIconWrapper}>*/}
+                    {/*        <img*/}
+                    {/*            src="src/assets/open-book-dark.png"*/}
+                    {/*            alt="Card Icon"*/}
+                    {/*            style={styles.cardIcon}*/}
+                    {/*        />*/}
+                    {/*    </div>*/}
+                    {/*    <p>Courses guidelines</p>*/}
+                    {/*</div>*/}
+                    {/*/!* Card 3 *!/*/}
+                    {/*<div style={{ ...styles.infoCard, ...styles.card3 }}>*/}
+                    {/*    <div style={styles.cardIconWrapper}>*/}
+                    {/*        <img*/}
+                    {/*            src="src/assets/university-dark.png"*/}
+                    {/*            alt="Card Icon"*/}
+                    {/*            style={styles.cardIcon}*/}
+                    {/*        />*/}
+                    {/*    </div>*/}
+                    {/*    <p>Expert trainers</p>*/}
+                    {/*</div>*/}
                 </div>
             </div>
             <StatsSection />
             <InfoSection />
             {/*<PopularCoursesSection />*/}
-            <BestsellerCourses/>
-            <PromoSection/>
-            <StudentReviews/>
-            <FAQSection/>
+            <BestsellerCourses />
+            <PromoSection />
+            <StudentReviews />
+            <FAQSection />
         </div>
     );
 };

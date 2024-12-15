@@ -2,7 +2,7 @@ import React from "react";
 
 const styles = {
     reviewsSection: {
-        backgroundColor: "#fdfaff",
+        backgroundColor: "#fdf8ff",
         padding: "3rem 5%",
         fontFamily: '"Poppins", sans-serif',
         minHeight: "85vh",
@@ -15,7 +15,7 @@ const styles = {
     title: {
         fontSize: "2rem",
         fontWeight: "700",
-        color: "#333",
+        color: "#320046",
     },
     subtitle: {
         fontSize: "1rem",
@@ -68,7 +68,7 @@ const styles = {
         left: "1rem",
         width: "60px", // Increased size to match avatar
         height: "60px", // Increased size to match avatar
-        backgroundColor: "#6a00f4",
+        backgroundColor: "#9237d0",
         borderRadius: "50%",
         display: "flex",
         alignItems: "center",
@@ -91,7 +91,7 @@ const styles = {
         fontWeight: "600",
         color: "#333",
         marginLeft: "8rem", // Adjusted to make sure the name starts after the photo
-        // marginBottom: "0.3rem",
+        marginBottom: "-0.4rem",
     },
     role: {
         fontSize: "0.9rem",
@@ -120,7 +120,7 @@ const StudentReviews: React.FC = () => {
             name: "Kate Barton",
             role: "Founder and CEO",
             text: "I am proud to say that after a few months of taking this course...I passed my exam and am now an AWS Certified Cloud Practitioner! Very good platform.",
-            avatar: "https://via.placeholder.com/50",
+            avatar: "/src/assets/girl.jpg",
             rating: 5,
         },
         {
@@ -150,7 +150,7 @@ const StudentReviews: React.FC = () => {
         <section style={styles.reviewsSection}>
             <div style={styles.header}>
                 <h2 style={styles.title}>Students Say About KnowHub</h2>
-                <p style={styles.subtitle}>What our learners think about our courses</p>
+                <p style={styles.subtitle}>What our learners think about our courses?</p>
             </div>
             <div style={styles.reviewsWrapper}>
                 <button
