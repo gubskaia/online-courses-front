@@ -1,0 +1,116 @@
+/* Header styles */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+.logoSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.platformName {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+}
+
+.searchSection {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 20px;
+    position: relative; /* Для абсолютного позиционирования иконки */
+}
+
+.searchInput {
+    padding: 10px 20px;
+    padding-left: 40px; /* Увеличиваем отступ слева, чтобы сдвинуть текст */
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    flex: 1;
+    max-width: 300px;
+    transition: box-shadow 0.3s;
+    padding-right: 35px; /* Место для иконки */
+}
+
+.searchIcon {
+    position: absolute;
+    left: 12px;  /* Позиционируем иконку слева */
+    font-size: 18px;
+    color: #ccc;
+}
+
+.navSection {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navLink {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navLink:hover {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+.loginButton {
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #a65fd5;
+    border-radius: 25px;
+    background-color: #a65fd5;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+.loginButton:hover {
+    background-color: transparent;
+    color: #a65fd5;
+}
+
+.signUpButton {
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid #a65fd5;
+    background-color: transparent;
+    color: #a65fd5;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.signUpButton:hover {
+    background-color: #a65fd5;
+    color: white;
+}
