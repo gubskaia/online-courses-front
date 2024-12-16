@@ -1,0 +1,135 @@
+.bestsellerSection {
+    position: relative;
+    background-color: #ffffff;
+    color: black;
+    padding: 3rem 5%;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+.backgroundOverlay {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 400px;
+    background-color: #0b0c10;
+    background-image: radial-gradient(
+            circle at 30% 30%,
+            rgba(138, 43, 226, 0.3),
+            transparent 60%
+    ),
+    radial-gradient(circle at 80% 50%, rgba(138, 43, 226, 0.3), transparent 60%);
+    background-repeat: no-repeat;
+    background-size: 700px 700px, 700px 700px;
+    background-position: left center, right center;
+    border-radius: 2rem;
+    z-index: 1;
+}
+
+.contentWrapper {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 2rem;
+    padding: 3rem 0;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.categoryMenu {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    margin: -4rem auto 2rem auto;
+    max-width: 80%;
+}
+
+.categoryButton {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activeCategoryButton {
+    background-color: #2b0c3b;
+    color: #ffffff;
+}
+
+.courseCarouselWrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+}
+
+.courseGrid {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: 2rem;
+}
+
+.arrowButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: rgba(56, 0, 75, 0.89);
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leftArrow {
+    left: 10px;
+}
+
+.rightArrow {
+    right: 10px;
+}
+
+.footerText {
+    font-size: 1rem;
+    color: #000;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.exploreText {
+    color: #8100c0;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+}
