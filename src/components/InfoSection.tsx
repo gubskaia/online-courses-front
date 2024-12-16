@@ -7,10 +7,12 @@ const styles = {
         justifyContent: "space-between",
         gap: "2rem",
         padding: "4rem 5%",
-        background: "linear-gradient(135deg, #e0f7fa, #ffffff)",
+        // background: "linear-gradient(135deg, #e0f7fa, #ffffff)",
         borderRadius: "15px",
-        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        // boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
         fontFamily: '"Poppins", sans-serif',
+        height: "100vh", // Занимает всю высоту экрана
+        overflow: "auto",
     },
     imageSection: {
         flex: 1,
@@ -21,10 +23,10 @@ const styles = {
         position: "relative",
     },
     image: {
-        width: "45%",
-        height: "400px",
+        width: "95%",
+        height: "500px",
         borderRadius: "15px",
-        filter: 'drop-shadow(0 0 70px rgba(0, 153, 255, 0.4))',
+        filter: 'drop-shadow(0 0 70px rgba(171, 119, 215, 0.4))',
     },
     imageOffset: {
         marginTop: "59px",
@@ -41,7 +43,7 @@ const styles = {
         gap: "0.5rem",
         fontSize: "1rem",
         fontWeight: "600",
-        color: "#004d91",
+        // color: "#910033",
     },
     cardIcon: {
         width: "40px",
@@ -52,12 +54,12 @@ const styles = {
     },
     topCard: {
         top: "10%",
-        left: "20%",
+        left: "5%",
         transform: "translateY(-50%)",
     },
     bottomCard: {
-        bottom: "10%",
-        right: "30%",
+        bottom: "70%",
+        right: "10%",
         transform: "translateY(50%)",
     },
     textSection: {
@@ -65,7 +67,7 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        color: "#004d91",
+        // color: "#004d91",
     },
     header: {
         display: "flex",
@@ -73,7 +75,7 @@ const styles = {
         marginBottom: "1rem",
     },
     headerIcon: {
-        backgroundColor: "#002b59",
+        backgroundColor: "#320854",
         padding: "0.3rem",
         borderRadius: "50%",
         display: "flex",
@@ -87,23 +89,23 @@ const styles = {
     },
     headerText: {
         fontSize: "1rem",
-        color: "#002c5d",
+        // color: "#002c5d",
     },
     title: {
         fontSize: "2.8rem",
         fontWeight: "700",
         lineHeight: "1.2",
-        color: "#003366",
+        // color: "#003366",
         marginBottom: "1rem",
     },
     highlight: {
-        color: "#007ac1",
+        color: "#320854",
     },
     description: {
         fontSize: "1.1rem",
         lineHeight: "1.8",
         marginBottom: "2rem",
-        color: "#002c5d",
+        // color: "#002c5d",
     },
     featuresGrid: {
         display: "grid",
@@ -129,11 +131,11 @@ const styles = {
     },
     featureText: {
         fontSize: "1rem",
-        color: "#004d91",
+        // color: "#004d91",
     },
     button: {
         display: "inline-block",
-        backgroundColor: "#007ac1",
+        background: "linear-gradient(135deg, #000000FF, #3c0c65)", // Dark purple gradient
         color: "white",
         padding: "1rem 2rem",
         borderRadius: "50px",
@@ -146,7 +148,7 @@ const styles = {
         transition: "transform 0.3s ease, background-color 0.3s ease",
     },
     buttonHover: {
-        backgroundColor: "#004d91",
+        background: "linear-gradient(135deg, #320854, #4b0082)", // Reverse gradient on hover
         transform: "scale(1.05)",
     },
 };
@@ -157,41 +159,41 @@ const InfoSection: React.FC = () => {
             {/* Image section with updated layout */}
             <div style={styles.imageSection}>
                 <img
-                    src="/src/assets/study.jpg"
+                    src="/src/assets/info3.png"
                     alt="Student Learning"
                     style={styles.image}
                 />
-                <img
-                    src="/src/assets/study2.jpg"
-                    alt="Online Classes"
-                    style={{ ...styles.image, ...styles.imageOffset }}
-                />
+                {/*<img*/}
+                {/*    src="/src/assets/study2.jpg"*/}
+                {/*    alt="Online Classes"*/}
+                {/*    style={{ ...styles.image, ...styles.imageOffset }}*/}
+                {/*/>*/}
 
                 {/* Top card */}
-                <div style={{ ...styles.card, ...styles.topCard }}>
-                    <img
-                        src="/src/assets/reviews.png"
-                        alt="Reviews"
-                        style={styles.cardIcon}
-                    />
-                    <div>
-                        <p style={styles.cardText}>35.3K+</p>
-                        <p>Positive Reviews</p>
-                    </div>
-                </div>
+                {/*<div style={{ ...styles.card, ...styles.topCard }}>*/}
+                {/*    <img*/}
+                {/*        src="/src/assets/reviews.png"*/}
+                {/*        alt="Reviews"*/}
+                {/*        style={styles.cardIcon}*/}
+                {/*    />*/}
+                {/*    <div>*/}
+                {/*        <p style={styles.cardText}>35.3K+</p>*/}
+                {/*        <p>Positive Reviews</p>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
 
                 {/* Bottom card */}
-                <div style={{ ...styles.card, ...styles.bottomCard }}>
-                    <img
-                        src="/src/assets/experience.png"
-                        alt="Experience"
-                        style={styles.cardIcon}
-                    />
-                    <div>
-                        <p style={styles.cardText}>20 Years</p>
-                        <p>Of Experiences</p>
-                    </div>
-                </div>
+                {/*<div style={{ ...styles.card, ...styles.bottomCard }}>*/}
+                {/*    <img*/}
+                {/*        src="/src/assets/experience.png"*/}
+                {/*        alt="Experience"*/}
+                {/*        style={styles.cardIcon}*/}
+                {/*    />*/}
+                {/*    <div>*/}
+                {/*        <p style={styles.cardText}>20 Years</p>*/}
+                {/*        <p>Of Experiences</p>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
 
             {/* Text section (right) */}
@@ -236,7 +238,7 @@ const InfoSection: React.FC = () => {
                         <div key={index} style={styles.featureItem}>
                             <div style={styles.featureIconWrapper}>
                                 <img
-                                    src={`/src/assets/check-mark.png`}
+                                    src={`/src/assets/checked.png`}
                                     alt="Feature Icon"
                                     style={styles.featureIcon}
                                 />
@@ -248,7 +250,7 @@ const InfoSection: React.FC = () => {
 
                 {/* Button */}
                 <a href="#top" style={styles.button}>
-                    Explore courses
+                    Explore Courses
                 </a>
             </div>
         </div>
