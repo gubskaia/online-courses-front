@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
+import AllCoursesPage from './pages/AllCoursesPage';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CourseDetails from "./pages/CourseDetails";
@@ -28,6 +29,7 @@ const App: React.FC = () => {
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/courses" element={<AllCoursesPage />} />
                     <Route path="/bestseller" element={<BestsellerCourses />} />
                     <Route path="/course/:id" element={<CourseDetails />} />
                     <Route path="/login" element={<LoginForm />} />
