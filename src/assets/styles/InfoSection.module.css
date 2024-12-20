@@ -1,0 +1,126 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 4rem 5%;
+    border-radius: 15px;
+    font-family: "Poppins", sans-serif;
+    height: 100vh; /* Занимает всю высоту экрана */
+    overflow: auto;
+}
+
+.imageSection {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.1rem;
+    position: relative;
+}
+
+.image {
+    width: 95%;
+    height: 500px;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 70px rgba(171, 119, 215, 0.4));
+}
+
+.textSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.headerIcon {
+    background-color: #320854;
+    padding: 0.3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.headerIconImg {
+    width: 24px;
+    height: 24px;
+}
+
+.headerText {
+    font-size: 1rem;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #320854;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+.featureIconWrapper {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featureIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.featureText {
+    font-size: 1rem;
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, #000000ff, #3c0c65); /* Темный градиент */
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #320854, #4b0082);
+    transform: scale(1.05);
+}
