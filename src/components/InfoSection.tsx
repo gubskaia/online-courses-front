@@ -55,7 +55,7 @@ const InfoSection: React.FC = () => {
                         <div key={index} className={styles.featureItem}>
                             <div className={styles.featureIconWrapper}>
                                 <img
-                                    src={`/src/assets/checked.png`}
+                                    src={`/src/assets/img/checked.png`}
                                     alt="Feature Icon"
                                     className={styles.featureIcon}
                                 />
@@ -66,7 +66,7 @@ const InfoSection: React.FC = () => {
                 </div>
 
                 {/* Button */}
-                <a href="#top" className={styles.button}>
+                <a href="/courses" className={styles.button}>
                     Explore Courses
                 </a>
             </div>

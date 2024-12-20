@@ -34,7 +34,7 @@ const Home: React.FC = () => {
                 {/* Right Section */}
                 <div className={styles.rightSection}>
                     <img
-                        src="src/assets/planet-home.png"
+                        src="src/assets/img/planet-new3.png"
                         alt="Students"
                         className={styles.image}
                     />

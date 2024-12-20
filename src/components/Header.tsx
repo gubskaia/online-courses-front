@@ -13,7 +13,7 @@ const Header: React.FC = () => {
                 onClick={() => navigate('/')} // Логотип ведет на главную страницу
                 style={{ cursor: 'pointer' }} // Указатель курсора
             >
-                <img src="../assets/img/logo.png" alt="Logo" className={styles.logo} />
+                <img src="/src/assets/img/logo.png" alt="Logo" className={styles.logo} />
                 <span className={styles.platformName}>KnowHub</span>
             </div>
 
