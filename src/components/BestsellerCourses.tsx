@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import { courses } from "../utils/dataCourses";
-import { categories } from "../utils/dataCategories";
-import { FaStar, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { courses } from "../utils/dataCourses"; // Данные курсов
+import { categories } from "../utils/dataCategories"; // Категории
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import CourseCard from "./CourseCard.tsx";
 import styles from "/src/assets/styles/BestsellerCourses.module.css";
 
@@ -10,14 +10,24 @@ const BestsellerCourses: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const courseGridRef = useRef<HTMLDivElement>(null);
 
+    // Фильтрация курсов по выбранной категории
     const filteredCourses =
         selectedCategory === 1
-            ? courses
-            : courses.filter((course) => course.category === selectedCategory);
+            ? courses // Если выбрана категория "All"
+            : courses.filter((course) => course.categoryId === selectedCategory);
+
+    // Смена категории
+    const handleCategoryChange = (categoryId: number) => {
+        setSelectedCategory(categoryId); // Обновляем выбранную категорию
+        setCurrentIndex(0); // Сбрасываем текущий индекс для показа с начала
+        if (courseGridRef.current) {
+            courseGridRef.current.scrollLeft = 0; // Сброс прокрутки
+        }
+    };
 
     const handlePrev = () => {
         setCurrentIndex((prev) =>
-            prev > 0 ? prev - 1 : filteredCourses.length - 3
+            prev > 0 ? prev - 1 : Math.max(filteredCourses.length - 3, 0)
         );
         if (courseGridRef.current) {
             courseGridRef.current.scrollLeft -= 320;
@@ -35,21 +45,19 @@ const BestsellerCourses: React.FC = () => {
 
     return (
         <section className={styles.bestsellerSection}>
-            {/* Background Overlay */}
             <div className={styles.backgroundOverlay}></div>
 
-            {/* Header */}
             <div className={styles.contentWrapper}>
                 <header className={styles.header}>
                     <h1 className={styles.title}>Bestseller Courses</h1>
                 </header>
 
-                {/* Category Menu */}
+                {/* Панель с категориями */}
                 <div className={styles.categoryMenu}>
                     {categories.map((category) => (
                         <button
                             key={category.id}
-                            onClick={() => setSelectedCategory(category.id)}
+                            onClick={() => handleCategoryChange(category.id)}
                             className={`${styles.categoryButton} ${
                                 selectedCategory === category.id
                                     ? styles.activeCategoryButton
@@ -61,11 +69,12 @@ const BestsellerCourses: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Course Carousel */}
+                {/* Карусель курсов */}
                 <div className={styles.courseCarouselWrapper}>
                     <button
                         className={`${styles.arrowButton} ${styles.leftArrow}`}
                         onClick={handlePrev}
+                        disabled={filteredCourses.length <= 3}
                     >
                         <FaArrowLeft />
                     </button>
@@ -81,12 +90,12 @@ const BestsellerCourses: React.FC = () => {
                     <button
                         className={`${styles.arrowButton} ${styles.rightArrow}`}
                         onClick={handleNext}
+                        disabled={filteredCourses.length <= 3}
                     >
                         <FaArrowRight />
                     </button>
                 </div>
 
-                {/* Footer */}
                 <p className={styles.footerText}>
                     Explore more courses.
                     <span className={styles.exploreText}>

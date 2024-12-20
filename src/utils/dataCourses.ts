@@ -12,7 +12,7 @@ export const courses: Course[] = [
         duration: '12h',
         price: '$99.00',
         oldPrice: '$120.00',
-        categoryId: 3, // Development
+        categoryId: 3,
         language: 'English',
         instructor: 'Elon Musk',
         lessons: 15,
@@ -27,7 +27,7 @@ export const courses: Course[] = [
         duration: '8h',
         price: '$85.00',
         oldPrice: '$100.00',
-        categoryId: 3, // Development
+        categoryId: 1,
         language: 'English',
         instructor: 'Elon Musk',
         lessons: 15,
@@ -42,7 +42,7 @@ export const courses: Course[] = [
         duration: '10h',
         price: '$75.00',
         oldPrice: '$90.00',
-        categoryId: 2, // Web Design
+        categoryId: 2,
         language: 'English',
         instructor: 'Elon Musk',
         lessons: 15,
@@ -57,7 +57,7 @@ export const courses: Course[] = [
         duration: '15h',
         price: '$120.00',
         oldPrice: '$140.00',
-        categoryId: 3, // Development
+        categoryId: 3,
         language: 'English',
         instructor: 'Elon Musk',
         lessons: 15,
@@ -72,7 +72,7 @@ export const courses: Course[] = [
         duration: '20h',
         price: '$200.00',
         oldPrice: '$250.00',
-        categoryId: 3, // Development
+        categoryId: 1,
         language: 'English',
         instructor: 'Elon Musk',
         lessons: 15,
