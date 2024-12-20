@@ -1,0 +1,92 @@
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 2rem 5%;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.leftSection {
+    flex: 10 10 40%;
+    min-width: 250px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.rightSection {
+    flex: 1 1 55%;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.linksColumn {
+    flex: 1 1 22%;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.linkTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.link {
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #f2a900;
+}
+
+.bottomRow {
+    margin-top: 2rem;
+    width: 100%;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.copyright {
+    text-align: center;
+}

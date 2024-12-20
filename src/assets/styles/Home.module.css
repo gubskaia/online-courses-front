@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 92vh;
+    padding: 0 6%;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.leftSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 5%;
+}
+
+.rightSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #0b0c10, #c67ae5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+    animation: gradientShift 5s infinite;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 270px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.darkButton {
+    background-color: #333333;
+    color: white;
+}
+
+.transparentButton {
+    background-color: transparent;
+    color: #5d1f77;
+    border: 2px solid #5d1f77;
+}
+
+.buttonHover:hover {
+    transform: scale(1.05);
+}
+
+.arrow {
+    margin-left: 10px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    animation: float 8s infinite ease-in-out;
+}
+
+.infoCard {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: 1rem;
+    max-width: 220px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.cardIconWrapper {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.card1 {
+    top: 8%;
+    left: 45%;
+}
+
+.card2 {
+    bottom: 25%;
+    right: 0%;
+}
+
+.card3 {
+    top: 45%;
+    left: 0%;
+}

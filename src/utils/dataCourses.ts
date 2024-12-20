@@ -1,12 +1,11 @@
 import { Course } from '../types/Course';
 
-// Курсы
 export const courses: Course[] = [
     {
         id: 1,
         title: 'Mastering React Basics',
         description: 'A comprehensive guide to mastering React. This course covers the core concepts and fundamental principles of React, helping you build dynamic and responsive web applications. You will learn how to manage state, handle events, and work with components, making it easier to create interactive UIs for web development projects.\n\nIn this course, we’ll dive deep into React’s component-based architecture, React Router for routing, and state management with hooks. By the end of this course, you’ll have a strong foundation to build scalable React applications and will be ready to tackle more advanced topics in React development.',
-        image: '/src/assets/background5.jpg',
+        image: '/src/assets/img/background5.jpg',
         rating: 4.8,
         students: 120,
         duration: '12h',
@@ -21,7 +20,7 @@ export const courses: Course[] = [
         id: 2,
         title: 'Advanced Java',
         description: 'Learn advanced concepts in Java. This course is designed for developers who are already familiar with Java and want to deepen their knowledge of the language. We will explore advanced topics like multithreading, concurrency, and design patterns, as well as diving into Java’s more complex libraries and frameworks.\n\nThroughout the course, you will work on practical examples and real-world scenarios that demonstrate how these advanced concepts are applied in production-level applications. By the end of this course, you will be able to confidently tackle complex Java projects and improve your problem-solving skills in object-oriented programming.',
-        image: '/src/assets/background5.jpg',
+        image: '/src/assets/img/background5.jpg',
         rating: 4.7,
         students: 95,
         duration: '8h',
@@ -36,7 +35,7 @@ export const courses: Course[] = [
         id: 3,
         title: 'UI/UX Design Fundamentals',
         description: 'Master the principles of UI/UX design. In this course, you will learn how to create user-centered designs that are not only visually appealing but also intuitive and user-friendly. We cover essential topics like user research, wireframing, prototyping, and usability testing to give you the skills needed to design effective digital experiences.\n\nBy the end of this course, you will have a strong understanding of the UI/UX design process, from initial concepts to final implementation. You will also gain hands-on experience creating wireframes and prototypes, equipping you with the tools to kickstart your career in the ever-growing field of user experience design.',
-        image: '/src/assets/background5.jpg',
+        image: '/src/assets/img/background5.jpg',
         rating: 4.9,
         students: 130,
         duration: '10h',
@@ -51,7 +50,7 @@ export const courses: Course[] = [
         id: 4,
         title: 'Python for Beginners',
         description: 'Begin your Python journey with this beginner course. Python is one of the most versatile and popular programming languages today, and this course is designed to help you get started with the basics. You will learn how to write simple Python programs, understand key concepts such as variables, data types, and control structures, and work with libraries that are essential for software development.\n\nAs you progress through the course, you will build small projects to practice your new skills. By the end of this course, you will have a solid understanding of Python syntax and be ready to move on to more advanced topics such as web development, data science, and automation.',
-        image: '/src/assets/background5.jpg',
+        image: '/src/assets/img/background5.jpg',
         rating: 4.6,
         students: 150,
         duration: '15h',
@@ -66,7 +65,7 @@ export const courses: Course[] = [
         id: 5,
         title: 'Web Development Bootcamp',
         description: 'Build real-world projects in this comprehensive bootcamp. This course is a complete guide to becoming a web developer, covering all the essential technologies you need to know, including HTML, CSS, JavaScript, and backend development with Node.js and databases. You will learn how to build dynamic and responsive websites from scratch and deploy them online.\n\nIn addition to mastering the core skills, you will work on projects that simulate real-world development scenarios, helping you gain hands-on experience. By the end of the course, you will have a portfolio of web applications to showcase to potential employers and be well-equipped to pursue a career in web development.',
-        image: '/src/assets/background5.jpg',
+        image: '/src/assets/img/background5.jpg',
         rating: 4.8,
         students: 180,
         duration: '20h',

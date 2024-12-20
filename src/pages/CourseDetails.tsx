@@ -1,4 +1,3 @@
-// CourseDetails.tsx
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FaStar, FaArrowRight, FaUser, FaClock, FaBook, FaUsers, FaGlobe, FaCertificate, FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";

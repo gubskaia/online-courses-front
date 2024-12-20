@@ -28,7 +28,7 @@ const FAQPage: React.FC = () => {
             <div className="md:w-1/2 w-full px-6 flex flex-col justify-center">
                 <div className="space-y-4">
                     <div className="collapse collapse-arrow bg-white shadow-lg rounded-lg">
-                        <input type="radio" name="accordion" defaultChecked />
+                        <input type="radio" name="accordion"/>
                         <div className="collapse-title text-xl font-medium text-black">
                             What courses do you offer?
                         </div>

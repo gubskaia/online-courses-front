@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import { courses } from "../utils/dataCourses"; // Данные курсов
-import { categories } from "../utils/dataCategories"; // Категории
+import { courses } from "../utils/dataCourses";
+import { categories } from "../utils/dataCategories";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import CourseCard from "./CourseCard.tsx";
 import styles from "/src/assets/styles/BestsellerCourses.module.css";
