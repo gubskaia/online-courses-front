@@ -1,24 +1,17 @@
+// CourseCard.tsx
 import React from "react";
 import { FaStar, FaClock, FaUser } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import styles from "/src/assets/styles/CourseCard.module.css";
-
-interface Course {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    rating: number;
-    students: number;
-    duration: string;
-    price: string;
-    oldPrice?: string;
-}
+import { Course } from "../types/Course";
 
 interface CourseCardProps {
     course: Course;
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
+    const navigate = useNavigate();
+
     const renderStars = (rating: number) => {
         const totalStars = 5;
         const filledStars = Math.round(rating);
@@ -36,8 +29,12 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
         );
     };
 
+    const handleClick = () => {
+        navigate(`/course/${course.id}`); // Переход на страницу с деталями курса
+    };
+
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={handleClick} style={{ cursor: "pointer" }}>
             <img src={course.image} alt={course.title} className={styles.image} />
             {renderStars(course.rating)}
             <h3 className={styles.title}>{course.title}</h3>

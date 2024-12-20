@@ -1,0 +1,262 @@
+/* Обертка всей страницы */
+.pageWrapper {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Верхняя секция */
+.headerSection {
+    background: #2b2b2b;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.headerContent {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 20px;
+}
+
+.headerContent .rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: -3px;
+}
+
+.headerContent .star {
+    color: gold;
+}
+
+.headerContent .title {
+    font-size: 2.5rem;
+    margin: 3px 0;
+    font-weight: bold;
+}
+
+.headerContent .meta {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.headerContent span {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Основная область контента */
+.mainContent {
+    display: flex;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+/* Левая часть */
+.leftContent {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 545px;
+}
+
+/* Навигация секций */
+.navMenu {
+    display: flex;
+    background: #f1f1f1;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.navMenu button {
+    flex: 1;
+    background: transparent;
+    padding: 15px 0;
+    color: #555;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.1s;
+}
+
+.navMenu button.active {
+    background: #39034FFF;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Секции контента */
+.sectionContent h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.sectionContent p,
+.sectionContent ul {
+    font-size: 1rem;
+    color: #555;
+}
+
+.sectionContent ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Правая карточка */
+.cardWrapper {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: -12rem;
+}
+
+/* Цена */
+.priceSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.currentPrice {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8932b4;
+    margin-top: 1rem;
+}
+
+.oldPrice {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #b0b0b0;
+    margin-top: 1rem;
+}
+
+/* Кнопка покупки */
+.buyButton {
+    background: linear-gradient(135deg, #000000FF, #39034f);
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.buyButton:hover {
+    background: transparent;
+    border: 2px solid #39034f;
+    color: #39034f;
+    font-weight: bold;
+}
+
+.courseImage {
+    border-radius: 20px;
+}
+
+/* Детали курса с иконками */
+.courseDetails {
+    margin: 20px 0;
+}
+
+.courseDetails p {
+    font-size: 1rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+}
+
+.courseDetails p i {
+    color: #8e44ad;
+    font-size: 1.2rem;
+}
+
+/* Секция контактов */
+.contactSection {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.contactSection h4 {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.contactSection p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contactSection p i {
+    font-size: 1.2rem;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .mainContent {
+        flex-direction: column;
+    }
+
+    .navMenu {
+        flex-direction: column;
+    }
+
+    .headerContent .title {
+        font-size: 2rem;
+    }
+
+    .cardWrapper {
+        margin-top: 0;
+    }
+}
